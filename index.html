@@ -11,12 +11,12 @@
 <body class="h-full grid place-items-center">
     
     <div id="app">
-        <section v-if="assignments.filter(a => !a.complete).length">
+        <section v-if="inProgressAssignments.length">
             <h2 class="font-bold mb-3">In Progress</h2>
 
             <ul>
                 <li 
-                    v-for="assignment in assignments.filter(a => !a.complete)" 
+                    v-for="assignment in inProgressAssignments" 
                     :key="assignment.id"
                 >
                     <label>
@@ -26,12 +26,12 @@
                 </li>
             </ul>
         </section>
-        <section class="mt-8" v-if="assignments.filter(a => a.complete).length">
+        <section class="mt-8" v-if="completedAssignments.length">
             <h2 class="font-bold mb-3">Completed</h2>
 
             <ul>
                 <li 
-                    v-for="assignment in assignments.filter(a => a.complete)" 
+                    v-for="assignment in completedAssignments" 
                     :key="assignment.id"
                 >
                     <label>
@@ -64,6 +64,15 @@
                             complete: false
                         },
                     ]
+                }
+            },
+
+            computed: {
+                inProgressAssignments( ) {
+                    return this.assignments.filter(a => ! a.complete)
+                },
+                completedAssignments() {
+                    return this.assignments.filter(a => a.complete)
                 }
             }
         }
