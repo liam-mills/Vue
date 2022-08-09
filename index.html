@@ -12,10 +12,22 @@
     
     <div id="app">
         <section>
-            <h2 class="font-bold mb-3">Assignments</h2>
+            <h2 class="font-bold mb-3">In Progress</h2>
 
             <ul>
-                <li v-for="assignment in assignments">
+                <li v-for="assignment in assignments.filter(a => !a.complete)" :key="assignment.id">
+                    <label>
+                        <input type="checkbox" v-model="assignment.complete" />
+                        {{ assignment.name }}
+                    </label>
+                </li>
+            </ul>
+        </section>
+        <section class="mt-8">
+            <h2 class="font-bold mb-3">Completed</h2>
+
+            <ul>
+                <li v-for="assignment in assignments.filter(a => a.complete)" :key="assignment.id">
                     <label>
                         <input type="checkbox" v-model="assignment.complete" />
                         {{ assignment.name }}
@@ -31,14 +43,17 @@
                 return {
                     assignments: [
                         {
+                            id: 1,
                             name: 'Finish project',
                             complete: false
                         },
                         {
+                            id: 2,
                             name: 'Read chapter',
                             complete: false
                         },
                         {
+                            id: 3,
                             name: 'Turn in homework',
                             complete: false
                         },
