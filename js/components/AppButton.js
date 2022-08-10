@@ -5,6 +5,10 @@ export default {
         </button>
     `,
 
+    props: {
+        type: String
+    },
+
     data() {
         return {
             processing: false
