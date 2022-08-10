@@ -1,17 +1,28 @@
 export default {
     template: `
-        <button class="bg-gray-200 hover:bg-gray-400 border rounded py-2 px-5 disabled:cursor-not-allowed" :disabled="processing">
+        <button 
+            :class="{
+                'rounded py-2 px-5 disabled:cursor-not-allowed': true,
+                'bg-blue-600 hover:bg-blue-700': type === 'primary',
+                'bg-purple-400 hover:bg-purple-400': type === 'secondary',
+                'bg-gray-200 hover:bg-gray-400': type === 'muted',
+                'is-loading relative': processing
+            }" 
+            :disabled="processing"
+        >
             <slot />
         </button>
     `,
 
     props: {
-        type: String
-    },
+        type: {
+            type: String,
+            default: 'primary'
+        },
 
-    data() {
-        return {
-            processing: false
+        processing: {
+            type: Boolean,
+            default: false
         }
-    }
+    },
 }
