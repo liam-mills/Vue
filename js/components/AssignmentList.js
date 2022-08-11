@@ -8,7 +8,7 @@ export default {
         <section v-if="assignments.length">
             <h2 class="font-bold mb-3">{{ title }}</h2>
 
-            <ul class="border border-gray-600 rounded divide-y divide-gray-600">
+            <ul class="border border-gray-600 rounded-lg divide-y divide-gray-600">
 
                 <assignment 
                     v-for="assignment in assignments" 
