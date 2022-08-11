@@ -7,45 +7,10 @@
     <title>Document</title>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-
-        body {
-            background: #111;
-        }
-
-        @keyframes is-loading {
-            to {transform: rotate(360deg);}
-        }
-
-        .is-loading {
-            color: transparent;
-        }
-        
-        .is-loading:before {
-            content: '';
-            box-sizing: border-box;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            margin-top: -10px;
-            margin-left: -10px;
-            border-radius: 50%;
-            border: 2px solid #ccc;
-            border-top-color: #000;
-            animation: is-loading .6s linear infinite;
-        }
-
-    </style>
 </head>
 <body class="h-full grid place-items-center">
     
-    <div id="app">
-        <app-button>New Request</app-button>
-        <app-button type="secondary" :processing="true">Update Request</app-button>
-        <app-button type="muted">Cancel</app-button>
-    </div>
+    <div id="app"></div>
 
     <script type="module">
         import App from "./js/components/App.js";
