@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/liam-mills/Vue/issues"
   },
-  "homepage": "https://github.com/liam-mills/Vue#readme"
+  "homepage": "https://github.com/liam-mills/Vue#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }
