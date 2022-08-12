@@ -20,17 +20,20 @@ export default {
                 {
                     id: 1,
                     name: 'Finish project',
-                    complete: false
+                    complete: false,
+                    tag: 'science'
                 },
                 {
                     id: 2,
                     name: 'Read chapter',
-                    complete: false
+                    complete: false,
+                    tag: 'science'
                 },
                 {
                     id: 3,
                     name: 'Turn in homework',
-                    complete: false
+                    complete: false,
+                    tag: 'english'
                 },
             ],
         }
