@@ -6,7 +6,10 @@ export default {
 
     template: `
         <section v-if="assignments.length">
-            <h2 class="font-bold mb-3">{{ title }}</h2>
+            <h2 class="font-bold mb-3">
+                {{ title }}
+                <span>({{ assignments.length }})</span>
+            </h2>
 
             <ul class="border border-gray-600 rounded-lg divide-y divide-gray-600">
 
