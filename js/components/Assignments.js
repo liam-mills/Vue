@@ -19,21 +19,33 @@ export default {
             assignments: [
                 {
                     id: 1,
-                    name: 'Finish project',
+                    name: 'Chemistry Chapter 1',
                     complete: false,
                     tag: 'science'
                 },
                 {
                     id: 2,
-                    name: 'Read chapter',
+                    name: 'Bio Chapter 3',
                     complete: false,
                     tag: 'science'
                 },
                 {
                     id: 3,
-                    name: 'Turn in homework',
+                    name: 'Hamlet',
                     complete: false,
                     tag: 'english'
+                },
+                {
+                    id: 4,
+                    name: 'Trigonometry',
+                    complete: false,
+                    tag: 'maths'
+                },
+                {
+                    id: 5,
+                    name: 'Geometry',
+                    complete: false,
+                    tag: 'maths'
                 },
             ],
         }
