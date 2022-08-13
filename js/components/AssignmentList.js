@@ -1,8 +1,9 @@
 import Assignment from './Assignment.js'
+import AssignmentTags from './AssignmentTags.js'
 
 export default {
 
-    components: { Assignment },
+    components: { Assignment, AssignmentTags },
 
     template: `
         <section v-if="assignments.length" class="space-y-3">
@@ -11,18 +12,11 @@ export default {
                 <span>({{ assignments.length }})</span>
             </h2>
 
-            <div class="flex gap-2">
-                <button 
-                    @click="currentTag = tag"
-                    v-for="tag in tags" 
-                    class="transition-all bg-purple-600 hover:bg-purple-700 rounded px-2 py-1 text-xs"
-                    :class="{
-                        'bg-blue-600': tag === currentTag
-                    }"
-                >
-                    {{ tag }}
-                </button>
-            </div>
+            <assignment-tags 
+                :currentTag="currentTag"
+                :tags="assignments.map(a => a.tag)"
+                @change="currentTag = $event"
+            ></assignment-tags>
 
             <ul class="border border-gray-600 rounded-lg divide-y divide-gray-600">
 
@@ -56,12 +50,6 @@ export default {
             } else {
                 return this.assignments.filter(a => a.tag === this.currentTag)
             }
-        },
-        tags() {
-            return [
-                'all', 
-                ...new Set(this.assignments.map(a => a.tag))
-            ];
         }
     }
 }
