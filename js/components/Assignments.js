@@ -16,38 +16,7 @@ export default {
 
     data() {
         return {
-            assignments: [
-                {
-                    id: 1,
-                    name: 'Chemistry Chapter 1',
-                    complete: false,
-                    tag: 'science'
-                },
-                {
-                    id: 2,
-                    name: 'Bio Chapter 3',
-                    complete: false,
-                    tag: 'science'
-                },
-                {
-                    id: 3,
-                    name: 'Hamlet',
-                    complete: false,
-                    tag: 'english'
-                },
-                {
-                    id: 4,
-                    name: 'Trigonometry',
-                    complete: false,
-                    tag: 'maths'
-                },
-                {
-                    id: 5,
-                    name: 'Geometry',
-                    complete: false,
-                    tag: 'maths'
-                },
-            ],
+            assignments: [],
         }
     },
 
@@ -58,6 +27,14 @@ export default {
                 completed: this.assignments.filter(a => a.complete)
             }
         }
+    },
+
+    created() {
+        fetch('http://localhost:3000/assignments')
+        .then(response => response.json())
+        .then(assignments => {
+            this.assignments = assignments
+        })
     },
 
     methods: {

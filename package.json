@@ -18,5 +18,8 @@
   "homepage": "https://github.com/liam-mills/Vue#readme",
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.0"
   }
 }

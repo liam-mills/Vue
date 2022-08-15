@@ -1,0 +1,28 @@
+{
+    "assignments": [
+        {
+            "id": 1,
+            "name": "Chemistry Chapter 1",
+            "complete": false,
+            "tag": "science"
+        },
+        {
+            "id": 2,
+            "name": "Chemistry Chapter 2",
+            "complete": false,
+            "tag": "science"
+        },
+        {
+            "id": 3,
+            "name": "Trigonometry Homework",
+            "complete": false,
+            "tag": "maths"
+        },
+        {
+            "id": 4,
+            "name": "Read Hamlet",
+            "complete": false,
+            "tag": "english"
+        }
+    ]
+}
