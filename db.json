@@ -21,7 +21,7 @@
         {
             "id": 4,
             "name": "Read Hamlet",
-            "complete": false,
+            "complete": true,
             "tag": "english"
         }
     ]
