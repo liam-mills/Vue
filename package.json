@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "json": "npx json-server --watch db.json"
   },
   "repository": {
     "type": "git",
