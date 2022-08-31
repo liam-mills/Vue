@@ -10,6 +10,10 @@ export default {
             <assignments></assignments>
 
             <panel>
+                <p>Hello</p>
+            </panel>
+
+            <panel>
                 <template v-slot:heading>
                     Hello World
                 </template>
