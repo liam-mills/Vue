@@ -6,7 +6,7 @@ export default {
     components: { Assignment, AssignmentTags },
 
     template: `
-        <section v-if="assignments.length" class="space-y-3 w-60">
+        <section v-if="assignments.length" class="space-y-3 w-60 bg-gray-700 p-3 border border-gray-600 rounded">
             <div class="flex items-center justify-between mb-3">
                 <h2 class="font-bold">
                     {{ title }}
