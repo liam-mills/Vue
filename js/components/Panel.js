@@ -4,7 +4,7 @@ export default {
             class="border rounded"
             :class="{
                 'bg-gray-700 p-3 border-gray-600': theme === 'dark',
-                'bg-gray-100 p-3 border-gray-200': theme === 'light'
+                'bg-gray-100 p-3 border-gray-200 text-black': theme === 'light'
             }"
         >
             <h2 
@@ -17,14 +17,7 @@ export default {
                 <slot name="heading" />
             </h2>
 
-            <div
-                :class="{
-                    'text-black': theme === 'light'
-                }"
-            >
-                <slot v-if="$slots.default" name="default" />
-            </div>
-            
+            <slot v-if="$slots.default" name="default" />            
 
             <footer 
                 v-if="$slots.footer" 
